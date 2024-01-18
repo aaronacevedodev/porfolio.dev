@@ -4,6 +4,8 @@ import Bootstrap from '../icons/Bootstrap.astro'
 import Php from '../icons/Php.astro'
 import MySQL from '../icons/MySQL.astro'
 import Javascript from '../icons/Javascript.astro'
+import LinkButton from './LinkButton.astro'
+import Www from '../icons/WWW.astro'
 
 const TAGS = {
     HTML: {
@@ -38,35 +40,50 @@ const TAGS = {
 const PROYECTOS = [
     {
         title: 'Aplicación de gestión para un bufete de abogados', 
-        description: 'Ayudamos al bufete Corrales a la mejora de la gestión documental y de clientes mediante una herramienta web personalizada. Ahora puede atender su despacho desde cualquier lugar del mundo.',
+        description: 'Ayudamos al bufete Corrales a mejorar la gestión documental y de clientes mediante una herramienta web personalizada. Ahora puede atender su despacho desde cualquier lugar del mundo.',
         link: '#',
         image: '/proyects/bufete.webp',
+        tags: [TAGS.HTML, TAGS.Bootstrap, TAGS.JavaScript, TAGS.Php, TAGS.MySQL]
+    },
+    {
+        title: 'Portal web y sistema de reservas para un restaurante', 
+        description: 'Transformamos la presencia online del restaurante, brindándole una plataforma web que va más allá de solo mostrar su carta. Los clientes pueden explorar los productos, acceder a la información de contacto y reservar mesa de manera conveniente.',
+        link: 'https://65a973a281ad490a9c3e0c96--fascinating-sprinkles-e84025.netlify.app/',
+        image: '/proyects/restaurante.webp',
         tags: [TAGS.HTML, TAGS.Bootstrap, TAGS.JavaScript, TAGS.Php, TAGS.MySQL]
     }
 ]
 ---
 
-{
-    PROYECTOS.map(({ title, description, link, image, tags }) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>   
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2"> 
-                {
-                    tags.map(tag => (
-                        <li>
-                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                                <tag.icon class="size-4" />  
-                                {tag.name}
-                            </span>
-                        </li>
-                    ))
-                }
-            </ul> 
-            <img 
-                class="rounded shadow-2xl shadow-white/10"
-                src={image} alt={`Captura de pantalla del proyecto ${image}`} 
-            />
-        </article> 
-    ))
-}
+<section class="flex flex-col gap-y-16">
+    {
+        PROYECTOS.map(({ title, description, link, image, tags }) => (
+            <article>
+                <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>   
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex gap-2 flex-row mb-2 flex-wrap"> 
+                    {
+                        tags.map(tag => (
+                            <li>
+                                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                    <tag.icon class="size-4" />  
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ul> 
+                <img 
+                    class="rounded shadow-2xl shadow-white/10"
+                    src={image} alt={`Captura de pantalla del proyecto ${image}`} 
+                />
+                <footer class="flex gap-x-4 items-end justify-start mt-4">
+                    <LinkButton href={link}>
+                        <Www /> 
+                        Ir al sitio web
+                    </LinkButton>
+                </footer>
+            </article> 
+        ))
+    }
+</section>
