@@ -1,0 +1,72 @@
+---
+import Html from '../icons/Html.astro'
+import Bootstrap from '../icons/Bootstrap.astro'
+import Php from '../icons/Php.astro'
+import MySQL from '../icons/MySQL.astro'
+import Javascript from '../icons/Javascript.astro'
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-[#e35026]/20 text-white",
+        icon: Html,
+    },
+    Bootstrap: {
+        name: "Bootstrap",
+        class: "bg-[#7e13f8]/20 text-white",
+        icon: Bootstrap,
+    },
+    Php: {
+        name: "PHP",
+        class: "bg-[#777cb4]/20 text-white",
+        icon: Php,
+    },
+    MySQL: {
+        name: "MySQL",
+        class: "bg-[#4479a0]/20 text-white",
+        icon: MySQL,
+    },
+    JavaScript: {
+        name: "JavaScript",
+        class: "bg-[#efdb50]/20 text-white",
+        icon: Javascript,
+    }
+
+    
+}
+
+const PROYECTOS = [
+    {
+        title: 'Aplicación de gestión para un bufete de abogados', 
+        description: 'Ayudamos al bufete Corrales a la mejora de la gestión documental y de clientes mediante una herramienta web personalizada. Ahora puede atender su despacho desde cualquier lugar del mundo.',
+        link: '#',
+        image: '/proyects/bufete.webp',
+        tags: [TAGS.HTML, TAGS.Bootstrap, TAGS.JavaScript, TAGS.Php, TAGS.MySQL]
+    }
+]
+---
+
+{
+    PROYECTOS.map(({ title, description, link, image, tags }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>   
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2"> 
+                {
+                    tags.map(tag => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-4" />  
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul> 
+            <img 
+                class="rounded shadow-2xl shadow-white/10"
+                src={image} alt={`Captura de pantalla del proyecto ${image}`} 
+            />
+        </article> 
+    ))
+}

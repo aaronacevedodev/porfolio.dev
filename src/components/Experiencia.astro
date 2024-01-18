@@ -1,0 +1,31 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...', 
+        title: 'Programador freelance', 
+        description: 'Desarrollo de diferentes aplicaciones web. Creación de un gestor de clientes para un bufete de abogados. Portal web y aplicación de gestión de reservas para un restaurante. Entre otros proyectos...', 
+        link: '',
+        textlink: '',
+    },
+    {
+        date: 'Enero 2021 a Febrero 2023', 
+        title: 'Pulsia Technology', 
+        description: 'Parte del equipo de desarrollo enfocado en crear portales y aplicaciones web para entidades públicas de toda España.', 
+        link: 'https://www.pulsia.es/',
+        textlink: 'Visitar web',
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">                  
+    {
+        EXPERIENCE.map(experiencia => (
+            <li class="mb-10 ms-4">
+                <ExperienciaItem {...experiencia} />
+            </li>
+        ))
+    }
+</ol>
+

@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GithubIcon from '../icons/Github.astro';
+import MailIcon from '../icons/Mail.astro';
+import SocialPils from '../components/SocialPils.astro'
+import Experiencia from '../components/Experiencia.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Briefcase from '../icons/Briefcase.astro';
+import Code from '../icons/Code.astro';
+
+---
+
+<Layout 
+	title="Porfolio de Aaron Acevedo - Desarrollador y programador web con 5 años de experiencia"
+	description="Contrata a Aaron Acevedo para crear tu aplicación web o móvil. Desarrollador y programador web. Me especializo en dar soluciones a través de aplicaciones."
+>
+	<main class="px-4">
+		<SectionContainer class="py-24 lg:py-44 pb-24">
+			<img 
+				class="rounded-full size-24 mb-4"
+				src="https://media.licdn.com/dms/image/D4E03AQHUgZrYI7CPRw/profile-displayphoto-shrink_800_800/0/1676379976895?e=1710979200&v=beta&t=0a-hu3hUOB12fpFCPGjYyypYATQM_zYRErep6EgW03I" 
+				alt="aaron photo"
+			/>
+			<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hey, soy Aarón Acevedo
+				<a 
+					href="https://www.linkedin.com/in/aaronacevedo/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para ayudarte</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>+5 años de experiencia. </span>
+
+				<span 
+					class="text-yellow-200/90"
+				>
+					Desarrollador web. </span>
+
+				<span 
+					class="text-red-200/90"
+				>
+					De Sevilla, España. </span>
+
+				<span class="opacity-80">Me especializo en dar soluciones a través de aplicaciones.</span>
+			</h2>
+
+			<!-- Iconos -->
+			<nav class="flex gap-4 mt-4 flex-wrap">
+				<SocialPils href="https://www.linkedin.com/in/aaronacevedo/">
+					<LinkedInIcon class="size-4 md:size-6" />
+					LinkdeIn
+				</SocialPils>
+
+				<SocialPils href="https://github.com/aaronacevedodev">
+					<GithubIcon class="size-4 md:size-6" />
+					Github
+				</SocialPils>
+
+				<SocialPils href="">
+					<MailIcon class="size-4 md:size-6" />
+					aaronacevedo94@gmail.com
+				</SocialPils>
+			</nav>
+
+		</SectionContainer>
+
+
+		<!-- Experiencia -->
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-6" />
+				Experiencia laboral
+			</h2>
+			<Experiencia />
+		</SectionContainer>
+
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-6" />
+				Proyectos
+			</h2>
+			<Proyectos></Proyectos>
+		</SectionContainer>
+		
+
+	</main>
+</Layout>
+
+
