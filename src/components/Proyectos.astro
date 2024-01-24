@@ -42,6 +42,7 @@ const PROYECTOS = [
         title: 'Plataforma de Gestión para Despachos Legales', 
         description: 'Facilitamos al Bufete Corrales optimizar la gestión documental y de clientes con nuestra herramienta web personalizada, permitiéndoles administrar su despacho de forma eficiente desde cualquier ubicación.',
         link: '#',
+        textlink: 'Solicitar demostración',
         image: '/proyects/bufete.webp',
         tags: [TAGS.HTML, TAGS.Bootstrap, TAGS.JavaScript, TAGS.Php, TAGS.MySQL]
     },
@@ -49,6 +50,7 @@ const PROYECTOS = [
         title: 'Experiencia Digital para Restaurantes: Portal Web y Reservas', 
         description: 'Elevamos la presencia online del restaurante con una plataforma web que va más allá de mostrar la carta. Permite a los clientes explorar productos, acceder a información de contacto y realizar reservas de manera conveniente.',
         link: 'https://65a973a281ad490a9c3e0c96--fascinating-sprinkles-e84025.netlify.app/',
+        textlink: 'Ir al sitio web',
         image: '/proyects/restaurante.webp',
         tags: [TAGS.HTML, TAGS.Bootstrap, TAGS.JavaScript, TAGS.Php, TAGS.MySQL]
     }
@@ -57,7 +59,8 @@ const PROYECTOS = [
 
 <section class="flex flex-col gap-y-16">
     {
-        PROYECTOS.map(({ title, description, link, image, tags }) => (
+        PROYECTOS.map(({ title, description, link, image, tags,
+        textlink }) => (
             <article>
                 <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>   
                 <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -80,7 +83,7 @@ const PROYECTOS = [
                 <footer class="flex gap-x-4 items-end justify-start mt-4">
                     <LinkButton href={link}>
                         <Www /> 
-                        Ir al sitio web
+                        {textlink}
                     </LinkButton>
                 </footer>
             </article> 
