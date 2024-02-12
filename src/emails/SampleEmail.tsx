@@ -2,7 +2,6 @@ import {
     Body,
     Container,
     Head,
-    Hr,
     Html,
     Preview,
     Text,
@@ -60,23 +59,4 @@ import {
     lineHeight: "26px",
   };
   
-  const btnContainer = {
-    textAlign: "center" as const,
-  };
-  
-  const button = {
-    backgroundColor: "#5F51E8",
-    borderRadius: "3px",
-    color: "#fff",
-    fontSize: "16px",
-    textDecoration: "none",
-    textAlign: "center" as const,
-    display: "block",
-    padding: "12px",
-  };
-  
-  const hr = {
-    borderColor: "#cccccc",
-    margin: "20px 0",
-  };
   
