@@ -2,6 +2,8 @@ import { render } from "@react-email/render";
 import SampleEmail from "../emails/SampleEmail";
 import React, { useState, useRef  } from "react";
 
+export const prerender = false;
+
 const FormularioEmail = () => {
     const [isFormSubmitted, setFormSubmitted] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
