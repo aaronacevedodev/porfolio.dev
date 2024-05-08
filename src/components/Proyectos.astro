@@ -9,6 +9,9 @@ import Www from '../icons/Www.astro'
 import Css from '../icons/Css.astro'
 import Drupal from '../icons/Drupal.astro'
 import Twig from '../icons/Twig.astro'
+import Next from '../icons/Next.astro'
+import PostgreSQL from '../icons/PostgreSQL.astro'
+import Tailwind from '../icons/Tailwind.astro'
 
 const TAGS = {
     HTML: {
@@ -50,12 +53,35 @@ const TAGS = {
         name: "Twig",
         class: "bg-[#84a61f]/20 text-white",
         icon: Twig,
+    },
+    Next: {
+        name: "Next.js",
+        class: "bg-[#ededed]/20 text-white",
+        icon: Next,
+    },
+    PostgreSQL: {
+        name: "PostgreSQL",
+        class: "bg-[#31648c]/20 text-white",
+        icon: PostgreSQL,
+    },
+    Tailwind: {
+        name: "Tailwind",
+        class: "bg-[#3ebff8]/20 text-white",
+        icon: Tailwind,
     }
 
     
 }
 
 const PROYECTOS = [
+{
+        title: 'Administrador digital de facturas', 
+        description: 'Optimice la gestión financiera de su empresa, obtenga una visión detallada del estado financiero de sus clientes y simplifique su proceso de facturación.',
+        link: 'https://admin-facturas.vercel.app/',
+        textlink: 'Ir al sitio web',
+        image: '/proyects/admin-facturas.webp',
+        tags: [TAGS.Next, TAGS.Tailwind, TAGS.PostgreSQL]
+    },
     {
         title: 'Gestor digital para entidades públicas', 
         description: 'Simplificamos la interacción con el Ayuntamiento de Ermua a través de un gestor de contenidos digital, permitiendo acceder a noticias actualizadas, realizar trámites administrativos y encontrar información relevante de manera rápida y sencilla.',
