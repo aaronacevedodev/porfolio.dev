@@ -10,6 +10,8 @@ import Proyectos from '../components/Proyectos.astro';
 import Briefcase from '../icons/Briefcase.astro';
 import Code from '../icons/Code.astro';
 import Whatsapp from '../icons/Whatsapp.astro'
+import Message from '../icons/Message.astro';
+import Contacto from '../components/Contacto.astro';
 
 ---
 
@@ -18,7 +20,7 @@ import Whatsapp from '../icons/Whatsapp.astro'
 	description="Contrata a Aaron Acevedo para crear tu aplicación web o móvil. Desarrollador y programador web. Me especializo en dar soluciones a través de aplicaciones."
 >
 	<main class="px-4">
-		<SectionContainer class="pt-24 lg:py-44 pb-24" id="contacto">
+		<SectionContainer class="pt-24 lg:py-44 pb-24">
 			<img 
 				class="rounded-full size-24 mb-4"
 				src="/foto_perfil.webp" 
@@ -87,6 +89,15 @@ import Whatsapp from '../icons/Whatsapp.astro'
 				Proyectos
 			</h2>
 			<Proyectos></Proyectos>
+		</SectionContainer>
+
+		<!-- Proyectos -->
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Message class="size-6" />
+				Hablemos
+			</h2>
+			<Contacto></Contacto>
 		</SectionContainer>
 
 	</main>

@@ -1,0 +1,31 @@
+---
+import ContactButtons from '../components/ContactButtons.astro'
+import Phone from '../icons/Phone.astro';
+import Whatsapp from '../icons/Whatsapp.astro';
+import MailIcon from '../icons/Mail.astro';
+---
+
+<section class="flex flex-col">
+    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">¡Ponte en contacto conmigo!</h3>
+    <p class="text-lg mb-6 text-pretty">
+        Cuéntame lo que necesitas y estaré encantado de ayudarte.
+    </p>
+
+    <div class="flex flex-row gap-4 justify-center">
+        <ContactButtons href="tel:+34600982742">
+            <Phone class="size-6 md:size-6" />
+            Llamar
+        </ContactButtons>
+    
+        <ContactButtons href="mailto:correo@aaronacevedo94@gmail.com">
+            <MailIcon class="size-6 md:size-6" />
+            aaronacevedo94@gmail.com
+        </ContactButtons>
+    
+        <ContactButtons href="https://wa.me/34600982742">
+            <Whatsapp class="size-6 md:size-6" />
+            Escribir un mensaje
+        </ContactButtons>
+    </div>
+                
+</section>
